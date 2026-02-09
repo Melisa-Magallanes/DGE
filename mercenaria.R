@@ -6,7 +6,7 @@ library(textshape)
 library(edgeR)
 
 ## ====== Paths ======
-setwd("D:/PASSER/BIVALVES/TRANSCRIPTOMAS/MERCENARIA/")
+setwd("")
 
 ## ====== Leer conteos ======
 mercenariafc <- read.delim("counts_merc_30vs10.txt", comment.char = "#", check.names = FALSE)
@@ -249,3 +249,4 @@ gsea <- GSEA(geneList   = geneVec,
 
 gsea_df <- as.data.frame(gsea)
 write.table(gsea_df, "GSEA_GO_results.tsv", sep="\t", quote=FALSE, row.names=FALSE)
+
