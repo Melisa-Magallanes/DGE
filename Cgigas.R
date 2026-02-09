@@ -7,7 +7,7 @@ library(ggplot2)
 library(tidyr)
 
 ## ====== Paths ======
-setwd("D:/PASSER/BIVALVES/TRANSCRIPTOMAS/CGIGAS")
+setwd("")
 
 ## ====== Leer conteos ======
 cgigasfc <- read.delim("counts_cgigas2.txt", comment.char = "#", check.names = FALSE)
@@ -269,7 +269,3 @@ TERM2NAME <- TERM2NAME %>%
   select(go_id, go_name) %>%
   distinct()
 
-
-## ====== Nota clave ======
-# Este flujo produce DEGs SIN réplicas biológicas (válido para reproducir el enfoque del paper),
-# pero NO reemplaza un análisis con replicación (edgeR/DESeq2/voom) cuando existan réplicas reales.
